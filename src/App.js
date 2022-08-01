@@ -5,7 +5,7 @@ import { useState } from "react";
 import { currencies } from "./Form/index.js";
 
 function App() {
-  const [result, setResult] = useState();
+  const [result, setResult] = useState(0);
 
   function calculateResult(currency, amount) {
     const rate = currencies.find(({ money }) => money === currency).rate;
@@ -26,8 +26,8 @@ function App() {
         <p className="calculator__paragraph">
           Kurs walut wynosi:{" "}
           <strong>
-            {result.targetAmount.toFixed(2)}
-            {result.currency}
+            {result && result.targetAmount.toFixed(2)}
+            {result && result.currency}
           </strong>
         </p>
       </main>
