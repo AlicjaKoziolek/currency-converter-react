@@ -1,7 +1,7 @@
 .calculator {
     flex-basis: 500px;
     margin: 20px;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     background-color: cornsilk;
 }
@@ -27,7 +27,7 @@
     font-family: 'Josefin Sans', sans-serif;
     font-weight: bolder;
     padding: 10px;
-    margin: 10px;
+    width: 100%;
 }
 
 .calculator__paragraph {
@@ -38,4 +38,8 @@
     background-color: rgb(3, 184, 184);
     border-radius: 10px;
     padding: 20px;
+}
+
+.calculator__section {
+    align-items: stretch;
 }
