@@ -1,5 +1,6 @@
-import "./style.css";
 import { useState } from "react";
+import { Result } from "./Result";
+import "./style.css";
 
 export const currencies = [
   {
@@ -15,16 +16,16 @@ export const currencies = [
 ];
 
 export const Form = ({ calculateResult, result }) => {
-  const [currency, setCurrency] = useState([0].money);
+  const [currency, setCurrency] = useState(currencies[0].money);
   const [amount, setAmount] = useState("");
 
-  const onFormSubmit = (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
     calculateResult(currency, amount);
-  };
+  }
 
   return (
-    <form>
+    <form className="calculator" onSubmit={onSubmit}>
       <fieldset className="calculator__fieldset">
         <legend className="calculator__legend">Przelicz walutę:</legend>
         <p>Pola oznaczone * są wymagane</p>
@@ -34,7 +35,6 @@ export const Form = ({ calculateResult, result }) => {
             <input
               value={amount}
               onChange={({ target }) => setAmount(target.value)}
-              name="value"
               placeholder="PLN"
               type="number"
               min="1"
@@ -44,14 +44,16 @@ export const Form = ({ calculateResult, result }) => {
         </p>
         <p>
           <label>
-            <span>Przelicz na:</span>
+            <span>Przelicz na: </span>
             <select
-              name="currency:"
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
             >
               {currencies.map((currency) => (
-                <option key={currency.money} value={currency.money}>
+                <option 
+                key={currency.money} 
+                value={currency.money}
+                >
                   {currency.name}
                 </option>
               ))}
@@ -59,12 +61,10 @@ export const Form = ({ calculateResult, result }) => {
           </label>
         </p>
 
-        <section>
+        <p>
           <button className="calculator__button">Sprawdź kurs</button>
-          <button type="reset" className="calculator__button">
-            Wyczyść
-          </button>
-        </section>
+        </p>
+        <Result result={result} />
       </fieldset>
     </form>
   );
