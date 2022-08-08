@@ -2,7 +2,7 @@ import "./style.css";
 
 export const Result = ({ result }) => (
   <p className="calculator__paragraph">
-    Kurs walut wynosi:&nbsp;
+    Kwota po przeliczeniu:&nbsp;
     {result !== undefined && (
       <>
         <strong>
