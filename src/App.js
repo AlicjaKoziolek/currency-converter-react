@@ -18,15 +18,13 @@ function App() {
   };
 
   return (
-      <div className="container">
-        <main className="calculator">
-          <Header title={"Kalkulator walutowy"} />
-          <Form 
-          result={result} 
-          calculateResult={calculateResult} />
-        </main>
+    <div className="container">
+      <main className="calculator">
+        <Header title={"Kalkulator walutowy"} />
+        <Form result={result} calculateResult={calculateResult} />
         <Footer footerContent={"Projekt autorstwa Alicji Koziołek"} />
-      </div>
+      </main>
+    </div>
   );
 }
 
