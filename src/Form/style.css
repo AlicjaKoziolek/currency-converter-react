@@ -29,6 +29,7 @@
     padding: 10px;
     width: 100%;
     border: none;
+    border-radius: 10px;
 }
 
 .calculator__paragraph {
