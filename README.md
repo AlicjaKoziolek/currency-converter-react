@@ -2,9 +2,15 @@
 
 ## Description
 
-The below calculator allows you to convert PLN to the selected currency EUR or USD. The curriences have a constant values. They are not updated.
+The below calculator allows you to convert PLN to the selected currency EUR or USD. 
+The curriences have a constant values. They are not updated. 
+The project was created in Polish language.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Instructions for using the calculator
+
+![Currency-converter-react](https://i.imgur.com/4ht0jRu.gif)
 
 ## Demo
 To go to the website, click on the link: [Currency-converter-react](https://alicjakoziolek.github.io/currency-converter-react).
@@ -54,4 +60,5 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 - React
 - Create-React-App
 - Babel
+- Webpack
 
