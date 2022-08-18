@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import Form from "./Form";
 import Header from "./Header";
-import Date from "./Date";
+import Clock from "./Clock";
 import { useState } from "react";
 import { currencies } from "./Form/index.js";
 
@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="container">
       <main className="calculator">
-        <Date dateContent={"Dzisiaj jest "} />
+        <Clock />
         <Header title={"Kalkulator walutowy"} />
         <Form result={result} calculateResult={calculateResult} />
         <Footer footerContent={"Projekt autorstwa Alicji Koziołek"} />
