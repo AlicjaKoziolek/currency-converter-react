@@ -1,0 +1,7 @@
+.clock {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: small;
+    text-align: right;
+    padding-bottom: 10px;
+    color: rgb(26, 26, 95);
+}
