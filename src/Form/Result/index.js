@@ -1,7 +1,7 @@
-import "./style.css";
+import { Paragraph } from "./styled";
 
 export const Result = ({ result }) => (
-  <p className="calculator__paragraph">
+  <Paragraph>
     Kwota po przeliczeniu:&nbsp;
     {result !== undefined && (
       <>
@@ -11,5 +11,5 @@ export const Result = ({ result }) => (
         </strong>
       </>
     )}
-  </p>
+  </Paragraph>
 );
