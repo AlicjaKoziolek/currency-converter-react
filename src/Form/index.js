@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Result } from "./Result";
 import "./style.css";
+import { Button, Fieldset, Legend } from "./styled";
 
 export const currencies = [
   {
@@ -26,8 +27,8 @@ export const Form = ({ calculateResult, result }) => {
 
   return (
     <form className="calculator" onSubmit={onSubmit}>
-      <fieldset className="calculator__fieldset">
-        <legend className="calculator__legend">Przelicz walutę:</legend>
+      <Fieldset>
+        <Legend>Przelicz walutę:</Legend>
         <p>Pola oznaczone * są wymagane</p>
         <p>
           <label>
@@ -62,10 +63,10 @@ export const Form = ({ calculateResult, result }) => {
         </p>
 
         <p>
-          <button className="calculator__button">Przelicz!</button>
+          <Button>Przelicz!</Button>
         </p>
         <Result result={result} />
-      </fieldset>
+      </Fieldset>
     </form>
   );
 };
