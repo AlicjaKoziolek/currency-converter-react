@@ -1,7 +1,6 @@
-import "./style.css";
+import { Caption } from "./styled";
 
-const Footer = ({ footerContent }) => (
-  <footer className="body__footer">{footerContent}</footer>
-);
+const Footer = ({ footerContent }) => 
+  <Caption>{footerContent}</Caption>;
 
 export default Footer;
