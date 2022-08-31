@@ -4,6 +4,7 @@ import Header from "./Header";
 import Clock from "./Clock";
 import { useState } from "react";
 import { currencies } from "./Form/index.js";
+import { Container, Main } from "./styled";
 
 function App() {
   const [result, setResult] = useState();
@@ -19,14 +20,14 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <main className="calculator">
+    <Container>
+      <Main>
         <Clock />
         <Header title={"Kalkulator walutowy"} />
         <Form result={result} calculateResult={calculateResult} />
         <Footer footerContent={"Projekt autorstwa Alicji Koziołek"} />
-      </main>
-    </div>
+      </Main>
+    </Container>
   );
 }
 
