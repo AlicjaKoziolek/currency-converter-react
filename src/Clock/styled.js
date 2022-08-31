@@ -6,5 +6,6 @@ export const Time = styled.div`
   font-weight: bolder;
   text-align: right;
   padding-bottom: 10px;
+  padding-top: 10px;
   color: black;
 `;
