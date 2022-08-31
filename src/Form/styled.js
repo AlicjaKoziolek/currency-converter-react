@@ -26,4 +26,10 @@ export const Button = styled.button`
   border-radius: 10px;
 `;
 
-
+export const Calculator = styled.main`
+  flex-basis: 500px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: cornsilk;
+`;
