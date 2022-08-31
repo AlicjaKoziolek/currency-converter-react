@@ -33,3 +33,7 @@ export const Calculator = styled.main`
   border-radius: 10px;
   background-color: cornsilk;
 `;
+
+export const Main = styled.div`
+  background-color: cornsilk;
+`;
