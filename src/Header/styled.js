@@ -9,5 +9,6 @@ export const MainHeader = styled.header`
   border-radius: 10px;
   font-weight: bolder;
   text-shadow: 1px 2px 3px black;
-  margin-bottom: 20px;
+  margin: 10px;
+  margin-top: 0;
 `;
