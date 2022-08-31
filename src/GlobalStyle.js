@@ -20,8 +20,4 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
         flex-direction: column;
     }
-
-    .main {
-        background-color: cornsilk;
-    }
 `;
