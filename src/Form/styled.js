@@ -34,6 +34,6 @@ export const Calculator = styled.main`
   background-color: cornsilk;
 `;
 
-export const Main = styled.div`
+export const Main = styled.main`
   background-color: cornsilk;
 `;
