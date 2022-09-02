@@ -22,7 +22,7 @@ function App() {
   const [result, setResult] = useState();
 
   const calculateResult = (currency, amount) => {
-    const rate = currencies.find(({ money }) => money === currency).rate;
+    const rate = currencies.find(({ shortName }) => shortName === currency).rate;
 
     setResult({
       enteredAmount: +amount,
