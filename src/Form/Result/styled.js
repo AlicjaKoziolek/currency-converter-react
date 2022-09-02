@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Section = styled.div`
+export const Section = styled.section`
   color: rgb(26, 26, 95);
   font-family: "Josefin Sans", sans-serif;
   font-weight: bolder;
