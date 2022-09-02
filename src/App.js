@@ -3,8 +3,20 @@ import Form from "./Form";
 import Header from "./Header";
 import Clock from "./Clock";
 import { useState } from "react";
-import { currencies } from "./Form/index.js";
 import { Container, Main } from "./styled";
+
+export const currencies = [
+  {
+    shortName: "USD",
+    name: "Dolar amerykański",
+    rate: 4.68,
+  },
+  {
+    shortName: "EUR",
+    name: "Euro",
+    rate: 4.75,
+  },
+];
 
 function App() {
   const [result, setResult] = useState();

@@ -1,19 +1,7 @@
 import { useState } from "react";
 import { Result } from "./Result";
+import { currencies } from "../App";
 import { Button, Fieldset, Legend, Calculator, Main } from "./styled";
-
-export const currencies = [
-  {
-    shortName: "USD",
-    name: "Dolar amerykański",
-    rate: 4.68,
-  },
-  {
-    shortName: "EUR",
-    name: "Euro",
-    rate: 4.75,
-  },
-];
 
 export const Form = ({ calculateResult, result }) => {
   const [currency, setCurrency] = useState(currencies[0].shortName);
