@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import background from "./background.jpg";
 
-export const Container = styled.body`
+export const Container = styled.div`
   display: flex;
   overflow-x: auto;
   background-image: url("${background}");
