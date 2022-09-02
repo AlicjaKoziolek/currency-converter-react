@@ -4,19 +4,19 @@ import { Button, Fieldset, Legend, Calculator, Main } from "./styled";
 
 export const currencies = [
   {
-    money: "USD",
+    shortName: "USD",
     name: "Dolar amerykański",
     rate: 4.68,
   },
   {
-    money: "Eur",
+    shortName: "EUR",
     name: "Euro",
     rate: 4.75,
   },
 ];
 
 export const Form = ({ calculateResult, result }) => {
-  const [currency, setCurrency] = useState(currencies[0].money);
+  const [currency, setCurrency] = useState(currencies[0].shortName);
   const [amount, setAmount] = useState("");
 
   const onSubmit = (event) => {
@@ -52,8 +52,8 @@ export const Form = ({ calculateResult, result }) => {
             >
               {currencies.map((currency) => (
                 <option 
-                key={currency.money} 
-                value={currency.money}
+                key={currency.shortName} 
+                value={currency.shortName}
                 >
                   {currency.name}
                 </option>
