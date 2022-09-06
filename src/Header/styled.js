@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainHeader = styled.header`
+export const StyledHeader = styled.header`
   background-color: rgb(3, 184, 184);
   color: rgb(26, 26, 95);
   font-family: "Josefin Sans", sans-serif;

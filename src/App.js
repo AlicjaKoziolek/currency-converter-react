@@ -3,7 +3,7 @@ import Form from "./Form";
 import Header from "./Header";
 import Clock from "./Clock";
 import { useState } from "react";
-import { Container, Main } from "./styled";
+import { StyledContainer, StyledMain } from "./styled";
 
 export const currencies = [
   {
@@ -32,14 +32,14 @@ function App() {
   };
 
   return (
-    <Container>
-      <Main>
+    <StyledContainer>
+      <StyledMain>
         <Clock />
         <Header title={"Kalkulator walutowy"} />
         <Form result={result} calculateResult={calculateResult} />
         <Footer footerContent={"Projekt autorstwa Alicji Koziołek"} />
-      </Main>
-    </Container>
+      </StyledMain>
+    </StyledContainer>
   );
 }
 

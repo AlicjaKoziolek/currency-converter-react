@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import background from "./background.jpg";
 
-export const Container = styled.div`
+export const StyledContainer = styled.div`
   display: flex;
   overflow-x: auto;
   background-image: url("${background}");
@@ -12,7 +12,7 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
-export const Main = styled.main`
+export const StyledMain = styled.main`
   background-color: cornsilk;
   margin: 10px;
   border-radius: 10px;

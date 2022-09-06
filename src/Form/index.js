@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Result } from "./Result";
 import { currencies } from "../App";
-import { Button, Fieldset, Legend, Calculator, Main } from "./styled";
+import { StyledForm, StyledFieldset, StyledLegend, StyledButton, StyledBody } from "./styled";
 
 export const Form = ({ calculateResult, result }) => {
   const [currency, setCurrency] = useState(currencies[0].shortName);
@@ -13,10 +13,10 @@ export const Form = ({ calculateResult, result }) => {
   }
 
   return (
-    <Main>
-      <Calculator onSubmit={onSubmit}>
-      <Fieldset>
-        <Legend>Przelicz walutę:</Legend>
+    <StyledBody>
+      <StyledForm onSubmit={onSubmit}>
+      <StyledFieldset>
+        <StyledLegend>Przelicz walutę:</StyledLegend>
         <p>Pola oznaczone * są wymagane</p>
         <p>
           <label>
@@ -51,12 +51,12 @@ export const Form = ({ calculateResult, result }) => {
         </p>
 
         <p>
-          <Button>Przelicz!</Button>
+          <StyledButton>Przelicz!</StyledButton>
         </p>
         <Result result={result} />
-      </Fieldset>
-    </Calculator>
-    </Main>
+      </StyledFieldset>
+    </StyledForm>
+    </StyledBody>
   );
 };
 

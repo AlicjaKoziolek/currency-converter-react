@@ -1,7 +1,7 @@
-import { Section } from "./styled";
+import { StyledSection } from "./styled";
 
 export const Result = ({ result }) => (
-  <Section>
+  <StyledSection>
     Kwota po przeliczeniu:&nbsp;
     {result !== undefined && (
       <>
@@ -11,5 +11,5 @@ export const Result = ({ result }) => (
         </strong>
       </>
     )}
-  </Section>
+  </StyledSection>
 );

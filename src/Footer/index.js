@@ -1,6 +1,6 @@
-import { Caption } from "./styled";
+import { StyledFooter } from "./styled";
 
 const Footer = ({ footerContent }) => 
-  <Caption>{footerContent}</Caption>;
+  <StyledFooter>{footerContent}</StyledFooter>;
 
 export default Footer;

@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const Fieldset = styled.fieldset`
+export const StyledFieldset = styled.fieldset`
   color: rgb(26, 26, 95);
   border-radius: 10px;
   padding-left: 20px;
   font-size: 20px;
 `;
 
-export const Legend = styled.legend`
+export const StyledLegend = styled.legend`
   font-family: "Josefin Sans", sans-serif;
   font-weight: bolder;
   font-size: 30px;
@@ -15,7 +15,7 @@ export const Legend = styled.legend`
   text-shadow: 1px 2px black;
 `;
 
-export const Button = styled.button`
+export const StyledButton = styled.button`
   color: rgb(26, 26, 95);
   background-color: rgb(3, 184, 184);
   font-family: "Josefin Sans", sans-serif;
@@ -26,14 +26,14 @@ export const Button = styled.button`
   border-radius: 10px;
 `;
 
-export const Calculator = styled.form`
+export const StyledForm = styled.form`
   flex-basis: 500px;
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
 `;
 
-export const Main = styled.div`
+export const StyledBody = styled.div`
   background-color: cornsilk;
   margin: 10px;
   border-radius: 10px;
