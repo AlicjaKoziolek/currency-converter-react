@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  background-color: rgb(3, 184, 184);
-  color: rgb(26, 26, 95);
+  background-color: ${({ theme }) => theme.color.robinsEggBlue};
+  color: ${({ theme }) => theme.color.luckyPoint};
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   padding: 5px;

@@ -6,5 +6,5 @@ export const StyledClock = styled.div`
   font-weight: bolder;
   text-align: right;
   padding: 10px;
-  color: black;
+  color: ${({ theme }) => theme.color.black};
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledFieldset = styled.fieldset`
-  color: rgb(26, 26, 95);
+  color: ${({ theme }) => theme.color.black};
   border-radius: 10px;
   padding-left: 20px;
   font-size: 20px;
@@ -11,13 +11,13 @@ export const StyledLegend = styled.legend`
   font-family: "Josefin Sans", sans-serif;
   font-weight: bolder;
   font-size: 30px;
-  color: rgb(3, 184, 184);
+  color: ${({ theme }) => theme.color.robinsEggBlue};
   text-shadow: 1px 2px black;
 `;
 
 export const StyledButton = styled.button`
-  color: rgb(26, 26, 95);
-  background-color: rgb(3, 184, 184);
+  color: ${({ theme }) => theme.color.luckyPoint};
+  background-color: ${({ theme }) => theme.color.robinsEggBlue};
   font-family: "Josefin Sans", sans-serif;
   font-weight: bolder;
   padding: 10px;
@@ -34,7 +34,7 @@ export const StyledForm = styled.form`
 `;
 
 export const StyledBody = styled.div`
-  background-color: cornsilk;
+  background-color: ${({ theme }) => theme.color.mimosa};
   margin: 10px;
   border-radius: 10px;
 `;

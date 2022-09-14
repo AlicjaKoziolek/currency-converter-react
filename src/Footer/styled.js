@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
-  color: rgb(26, 26, 95);
+  color: ${({ theme }) => theme.color.luckyPoint};
   font-family: "Josefin Sans", sans-serif;
   padding: 10px;
   text-align: center;

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const StyledSection = styled.section`
-  color: rgb(26, 26, 95);
+  color: ${({ theme }) => theme.color.luckyPoint};
   font-family: "Josefin Sans", sans-serif;
   font-weight: bolder;
   font-size: 20px;
-  background-color: rgb(3, 184, 184);
+  background-color: ${({ theme }) => theme.color.robinsEggBlue};
   border-radius: 10px;
   padding: 20px;
 `;
