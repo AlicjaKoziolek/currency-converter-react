@@ -1,61 +1,92 @@
 import { useState } from "react";
 import { Result } from "./Result";
-import { currencies } from "../App";
-import { StyledForm, StyledFieldset, StyledLegend, StyledButton, StyledBody } from "./styled";
+import {
+  StyledForm,
+  StyledFieldset,
+  StyledLegend,
+  StyledButton,
+  StyledBody,
+  Loading,
+  Failure,
+} from "./styled";
+import { useRatesData } from "./useRatesData";
 
-export const Form = ({ calculateResult, result }) => {
-  const [currency, setCurrency] = useState(currencies[0].shortName);
+const Form = () => {
+  const [currency, setCurrency] = useState("EUR");
   const [amount, setAmount] = useState("");
+
+  const [result, setResult] = useState();
+  const ratesData = useRatesData();
+
+  const calculateResult = (currency, amount) => {
+    const rate = ratesData.rates[currency];
+
+    setResult({
+      enteredAmount: +amount,
+      targetAmount: amount * rate,
+      currency,
+    });
+  };
 
   const onSubmit = (event) => {
     event.preventDefault();
     calculateResult(currency, amount);
-  }
+  };
 
   return (
     <StyledBody>
       <StyledForm onSubmit={onSubmit}>
-      <StyledFieldset>
-        <StyledLegend>Przelicz walutę:</StyledLegend>
-        <p>Pola oznaczone * są wymagane</p>
-        <p>
-          <label>
-            <span>Podaj kwotę*: </span>
-            <input
-              value={amount}
-              onChange={({ target }) => setAmount(target.value)}
-              placeholder="PLN"
-              type="number"
-              min="1"
-              required
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            <span>Przelicz na: </span>
-            <select
-              value={currency}
-              onChange={({ target }) => setCurrency(target.value)}
-            >
-              {currencies.map((currency) => (
-                <option 
-                key={currency.shortName} 
-                value={currency.shortName}
+        {ratesData.state === "loading" ? (
+          <Loading>
+            <p>Proszę czekać... <br />
+            Trwa ładowanie kursu walut <br/>
+            z Europejskiego Banku Centralnego</p>
+          </Loading>
+        ) : ratesData.state === "error" ? (
+          <Failure>
+            Upss.... Coś poszło nie tak. Sprawdź połączenie z internetem
+          </Failure>
+        ) : (
+          <StyledFieldset>
+            <StyledLegend>Przelicz walutę:</StyledLegend>
+            <p>Pola oznaczone * są wymagane</p>
+            <p>
+              <label>
+                <span>Podaj kwotę*: </span>
+                <input
+                  value={amount}
+                  onChange={({ target }) => setAmount(target.value)}
+                  placeholder="PLN"
+                  type="number"
+                  min="1"
+                  required
+                />
+              </label>
+            </p>
+            <p>
+              <label>
+                <span>Przelicz na: </span>
+                <select
+                  value={currency}
+                  onChange={({ target }) => setCurrency(target.value)}
                 >
-                  {currency.name}
-                </option>
-              ))}
-            </select>
-          </label>
-        </p>
+                  {!!ratesData.rates &&
+                    Object.keys(ratesData.rates).map((currency) => (
+                      <option key={currency} value={currency}>
+                        {currency}
+                      </option>
+                    ))}
+                </select>
+              </label>
+            </p>
 
-        <p>
-          <StyledButton>Przelicz!</StyledButton>
-        </p>
-        <Result result={result} />
-      </StyledFieldset>
-    </StyledForm>
+            <p>
+              <StyledButton>Przelicz!</StyledButton>
+            </p>
+            <Result result={result} />
+          </StyledFieldset>
+        )}
+      </StyledForm>
     </StyledBody>
   );
 };

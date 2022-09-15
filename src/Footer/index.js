@@ -1,6 +1,12 @@
-import { StyledFooter } from "./styled";
+import { StyledFooter, StyledLink } from "./styled";
 
-const Footer = ({ footerContent }) => 
-  <StyledFooter>{footerContent}</StyledFooter>;
+const Footer = () => (
+  <StyledFooter>
+    Kursy walut pobierane są z &nbsp;
+    <StyledLink href="https://exchangerate.host">
+      Europejskiego Banku Centralnego
+    </StyledLink>
+  </StyledFooter>
+);
 
 export default Footer;

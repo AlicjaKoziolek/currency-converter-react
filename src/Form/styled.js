@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import loading from "./loader.gif";
 
 export const StyledFieldset = styled.fieldset`
   color: ${({ theme }) => theme.color.black};
@@ -37,4 +38,25 @@ export const StyledBody = styled.div`
   background-color: ${({ theme }) => theme.color.mimosa};
   margin: 10px;
   border-radius: 10px;
+`;
+
+export const Loading = styled.div`
+  padding: 20px;
+  background-image: url("${loading}");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+  color: ${({ theme }) => theme.color.luckyPoint};
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+`;
+
+export const Failure = styled.div`
+  padding: 20px;
+  color: ${({ theme }) => theme.color.luckyPoint};
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: ${({ theme }) => theme.color.crimson};
 `;
