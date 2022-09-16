@@ -54,7 +54,6 @@ export const Loading = styled.div`
 
 export const Failure = styled.div`
   padding: 20px;
-  color: ${({ theme }) => theme.color.luckyPoint};
   text-align: center;
   font-size: 15px;
   font-weight: bold;

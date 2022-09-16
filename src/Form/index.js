@@ -38,13 +38,17 @@ const Form = () => {
       <StyledForm onSubmit={onSubmit}>
         {ratesData.state === "loading" ? (
           <Loading>
-            <p>Proszę czekać... <br />
-            Trwa ładowanie kursu walut <br/>
+            <p>Proszę czekać...<br/>
+            Trwa ładowanie kursu walut<br/>
             z Europejskiego Banku Centralnego</p>
           </Loading>
         ) : ratesData.state === "error" ? (
           <Failure>
-            Upss.... Coś poszło nie tak. Sprawdź połączenie z internetem
+            Upss.... Coś poszło nie tak 🤔<br/>
+            Sprawdź proszę połączenie z internetem<br/> 
+            Jeśli połączenie działa prawidłowo,<br/>
+            prawdopodobnie wina leży po naszej stronie.<br/>
+            Spóbuj ponownie za kilka minut 
           </Failure>
         ) : (
           <StyledFieldset>
