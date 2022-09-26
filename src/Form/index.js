@@ -8,8 +8,10 @@ import {
   StyledBody,
   Loading,
   Failure,
+  LoaderGif,
 } from "./styled";
 import { useRatesData } from "./useRatesData";
+import loader from "./loader.gif";
 
 const Form = () => {
   const [currency, setCurrency] = useState("EUR");
@@ -38,17 +40,25 @@ const Form = () => {
       <StyledForm onSubmit={onSubmit}>
         {ratesData.state === "loading" ? (
           <Loading>
-            <p>Proszę czekać...<br/>
-            Trwa ładowanie kursu walut<br/>
-            z Europejskiego Banku Centralnego</p>
+            <p>
+              Proszę czekać...
+              <br />
+              Trwa ładowanie kursu walut
+              <br />z Europejskiego Banku Centralnego
+            </p>
+            <LoaderGif src={loader} />
           </Loading>
         ) : ratesData.state === "error" ? (
           <Failure>
-            Upss.... Coś poszło nie tak 🤔<br/>
-            Sprawdź proszę połączenie z internetem<br/> 
-            Jeśli połączenie działa prawidłowo,<br/>
-            prawdopodobnie wina leży po naszej stronie.<br/>
-            Spóbuj ponownie za kilka minut 
+            Upss.... Coś poszło nie tak 🤔
+            <br />
+            Sprawdź proszę połączenie z internetem
+            <br />
+            Jeśli połączenie działa prawidłowo,
+            <br />
+            prawdopodobnie wina leży po naszej stronie.
+            <br />
+            Spóbuj ponownie za kilka minut
           </Failure>
         ) : (
           <StyledFieldset>
@@ -56,11 +66,11 @@ const Form = () => {
             <p>Pola oznaczone * są wymagane</p>
             <p>
               <label>
-                <span>Podaj kwotę*: </span>
+                <span>Kwota w PLN*: </span>
                 <input
                   value={amount}
                   onChange={({ target }) => setAmount(target.value)}
-                  placeholder="PLN"
+                  placeholder="Wpisz kwotę w PLN"
                   type="number"
                   min="1"
                   required

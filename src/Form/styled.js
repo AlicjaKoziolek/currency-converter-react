@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import loading from "./loader.gif";
 
 export const StyledFieldset = styled.fieldset`
   color: ${({ theme }) => theme.color.black};
@@ -42,14 +41,14 @@ export const StyledBody = styled.div`
 
 export const Loading = styled.div`
   padding: 20px;
-  background-image: url("${loading}");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20%;
   color: ${({ theme }) => theme.color.luckyPoint};
   text-align: center;
   font-size: 15px;
   font-weight: bold;
+`;
+
+export const LoaderGif = styled.img`
+  width: 80px;
 `;
 
 export const Failure = styled.div`
