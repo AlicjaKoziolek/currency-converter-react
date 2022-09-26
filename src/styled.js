@@ -1,13 +1,8 @@
 import styled from "styled-components";
-import background from "./background.jpg";
 
 export const StyledContainer = styled.div`
   display: flex;
   overflow-x: auto;
-  background-image: url("${background}");
-  background-position: center;
-  background-size: cover;
-  min-height: 100vh;
   align-items: center;
   flex-direction: column;
 `;
