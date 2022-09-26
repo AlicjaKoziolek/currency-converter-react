@@ -14,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Instructions for using the calculator
 
-![Currency-converter-react](https://i.imgur.com/G7D218L.gif)
+![Currency-converter-react](https://i.imgur.com/ouQv0tl.gif)
 
 ## Demo
 To go to the website, click on the link: [Currency-converter-react](https://alicjakoziolek.github.io/currency-converter-react).
